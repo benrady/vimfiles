@@ -1,0 +1,29 @@
+# Anonymous Function
+snippet fu
+	function(${1}) { ${2} }
+# Jasmine test 
+snippet it
+	it('${1}', function() {
+	  expect(${2}).toEqual(${3});
+	});
+# Jasmine test 
+snippet bef
+	beforeEach(function() {
+	  ${1};
+	});
+# Jasmine describe 
+snippet des
+	describe('${1}', function() {
+	  ${2}
+	});
+# Modit module
+snippet mod
+	modit('${1}', function() {
+	  ${2}
+	});
+# Underscore reduce
+snippet red
+	_.reduce(${1}, function(memo, item) {
+	  ${2}
+	  return memo;
+	}, {});

@@ -1,0 +1,33 @@
+snippet des
+	(describe 
+	  "${1:something}"
+
+	  (it "${2:should-do-something}"
+		  (${3})))
+snippet it
+	(it "${1:should-do-something}"
+	    (${2}))
+
+snippet bef
+	(before 
+	  (${1}))
+
+snippet aro
+	(around [it] 
+	  ${1}
+	  (it))
+
+snippet aft
+	(after 
+	  (${1}))
+
+snippet should
+	(should= ${1:expected} (${2:actual}))
+
+snippet ar
+	(add-recipe "${1}" 
+	            {"${2}" {:quantity ${3} :units "ounce"}
+				 "${4}" {:quantity ${5} :units "ounce"}
+				 }[[add-shaker "${6}"]
+				   [add-it "${7}"]
+				   ])

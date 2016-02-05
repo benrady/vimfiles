@@ -1,0 +1,21 @@
+" vim: filetype=help foldmethod=marker foldmarker=<<<,>>> modifiable noreadonly
+
+Leader Ref:
+"add      delete the current line into the a register
+,cd       Change to directory of current file
+,rr       Replace tabs with spaces
+,r        Rdoc lookup for the word under the cursor
+,v        ruby source lookup for the path under the cursor
+
+selector
+"Np             Paste the last Nth delete
+]p  	        Just like p, but it automatically adjusts the indent level of the pasted code to match that of the code you paste into.
+:%s/\n/\r/g     Replace newline with newline (notice difference between search and replace)
+:s/foo/bar/I    Force a case sensitive search and replace of 'foo' in the current line
+CTRL-U          half screen Up
+CTRL-D          half screen Down
+:set spell      Turn on spellchecking (z= to correct, zg to iGnore)
+CTRL-[          Enter normal mode
+CTRL-r CTRL-W   Insert the current word in the command window
+q:              Command history window
+!{motion}       Pre-populates cmd line with filter cmd on {motion}
