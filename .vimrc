@@ -39,18 +39,10 @@ set bufhidden=delete
 
 " Better tab settings
 set sts=2
-set smarttab
 set shiftwidth=2
-set autoindent
 set expandtab
 
-set backspace=start,eol,indent
-
-" Highlights matches when searching
-set incsearch
-
-" Automatically read and write files as needed
-set autoread
+" Automatically write files as needed
 set autowrite
 
 " With these options together, we only use case sensitive search when there is a captial letter in the search term
@@ -67,7 +59,6 @@ syntax sync fromstart
 set lazyredraw
 
 " completion on the command line
-set wildmenu
 set wildmode=list:longest
 
 " numbered lines
@@ -99,11 +90,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Add more info in status line
 set statusline=%F%m%r%h%w\ [Line=%03l,Col=%03v][%p%%]\ [Type=%y]\ %{fugitive#statusline()}
-set laststatus=2
-
-" vimClojure config
-let vimclojure#HighlightBuiltins=1 
-let vimclojure#ParenRainbow=1
 
 " map %% to expand to the current file's directory
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -114,7 +100,6 @@ imap <C-space> <C-n>
 
 " Filetype hacks
 au BufRead,BufNewFile *_spec.rb set filetype=rspec
-au VimEnter * RainbowParenthesesToggle
 
 if filereadable(".vimrc.local") 
   source .vimrc.local
