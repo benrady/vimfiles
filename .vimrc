@@ -2,7 +2,7 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" Enable tag lookup with CTRL-P
+" Map Ctrl-l to ctrlp tag lookup
 let g:ctrlp_extensions = ['tag']
 nmap <silent> <C-l> :CtrlPTag<CR>
 
