@@ -19,10 +19,6 @@ set hidden
 " Set the path
 set path=.,,**
 
-" Edit or load .vimrc
-nmap <silent> <leader>ev :tabe $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
 " Replace all instances of the word under the cursor
 nnoremap <Leader>s :%s/\V\<<C-r><C-w>\>/
 
