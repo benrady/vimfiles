@@ -30,6 +30,9 @@ function fetch_repo {
 # Sensible default settings
 fetch_repo git@github.com:tpope/vim-sensible.git
 
+# Solarized color scheme
+fetch_repo git://github.com/altercation/vim-colors-solarized.git
+
 # Airline status bar
 fetch_repo git@github.com:vim-airline/vim-airline.git
 
