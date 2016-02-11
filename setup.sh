@@ -8,6 +8,12 @@ if [[ ! -e ~/.vimrc ]]; then
   ln -s $vim_dir/.vimrc ~/.vimrc
 fi
 
+if [[ ! -e ~/$HOME/nvim ]]; then
+  mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+  ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+  ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+fi
+
 function fetch_repo {
   local url=$1
   local repo=${1##*/}
@@ -21,8 +27,15 @@ function fetch_repo {
   fi
 }
 
+# Sensible default settings
+fetch_repo git@github.com:tpope/vim-sensible.git
+
+# Airline status bar
+fetch_repo git@github.com:vim-airline/vim-airline.git
+
 # CTRL-P and its dependencies
 fetch_repo https://github.com/MarcWeber/vim-addon-mw-utils.git
+fetch_repo https://github.com/ctrlpvim/ctrlp.vim
 
 # Create HTML using css expressions
 fetch_repo https://github.com/rstacruz/sparkup.git
@@ -44,7 +57,6 @@ fetch_repo https://github.com/kien/rainbow_parentheses.vim.git
 fetch_repo https://github.com/guns/vim-clojure-static.git 
 
 # Snippets for many languages (hit tab)
-fetch_repo https://github.com/kien/ctrlp.vim.git
 fetch_repo https://github.com/tomtom/tlib_vim.git
 fetch_repo https://github.com/garbas/vim-snipmate.git
 fetch_repo https://github.com/honza/vim-snippets.git # Has the actual snippet files
