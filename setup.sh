@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 abspath="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
 vim_dir=`dirname $abspath`
