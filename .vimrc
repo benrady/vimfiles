@@ -21,9 +21,10 @@ nnoremap <Leader>s :%s/\V\<<C-r><C-w>\>/
 set history=10000
 
 " Color Scheme
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
+highlight Normal ctermbg=black
 
 " Better tab settings
 set sts=2
