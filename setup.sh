@@ -8,8 +8,8 @@ if [[ ! -e ~/.vimrc ]]; then
   ln -s $vim_dir/.vimrc ~/.vimrc
 fi
 
-if [[ ! -e ~/$HOME/nvim ]]; then
-  mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+if [[ ! -e $XDG_CONFIG_HOME/nvim ]]; then
   ln -s ~/.vim $XDG_CONFIG_HOME/nvim
   ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 fi
