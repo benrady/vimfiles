@@ -32,6 +32,10 @@ set shiftwidth=2
 set expandtab
 set smartindent
 
+" Disable mouse support, so that the terminal handles mouse highlighting
+" instead of vim
+set mouse=
+
 " Automatically read and write files as needed
 set autowrite
 set autoread
