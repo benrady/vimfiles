@@ -43,6 +43,7 @@ set smartcase
 " Always syntax format the whole file
 syntax sync fromstart
 
+" Don't update the screen while macros are running
 set lazyredraw
 
 " completion on the command line
@@ -61,7 +62,7 @@ set linebreak
 " no beeps
 set visualbell
 
-" Ignore directories that have crap in them
+" Global ignores
 set wildignore+=tmp,target,*.pyc,*.class
 
 " My Favorite font
