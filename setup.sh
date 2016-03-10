@@ -28,13 +28,13 @@ function fetch_repo {
 }
 
 # Sensible default settings
-fetch_repo git@github.com:tpope/vim-sensible.git
+fetch_repo git://github.com/tpope/vim-sensible.git
 
 # Solarized color scheme
 fetch_repo git://github.com/altercation/vim-colors-solarized.git
 
 # Airline status bar
-fetch_repo git@github.com:vim-airline/vim-airline.git
+fetch_repo git://github.com/vim-airline/vim-airline.git
 
 # CTRL-P and its dependencies
 fetch_repo https://github.com/MarcWeber/vim-addon-mw-utils.git
