@@ -10,6 +10,9 @@ nmap <silent> <C-S-l> :CtrlPTag<CR>
 " Remap Ctrl-j to: Save All; Return to normal mode
 imap <silent> <C-j> <Esc>:wa<CR>
 nmap <silent> <C-j> :wa<CR>
+if has('nvim')
+  tnoremap <silent> <C-j> <C-\><C-n>
+endif
 
 " Set the path
 set path=.,,**
