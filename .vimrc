@@ -3,10 +3,6 @@
 call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
-" Map Ctrl-t to ctrlp tag lookup
-let g:ctrlp_extensions = ['tag']
-nmap <silent> <C-S-l> :CtrlPTag<CR>
-
 " Remap Ctrl-j to: Save All; Return to normal mode
 imap <silent> <C-j> <Esc>:wa<CR>
 nmap <silent> <C-j> :wa<CR>
@@ -19,6 +15,10 @@ set path=.,,**
 
 " Replace all instances of the word under the cursor
 nnoremap <Leader>s :%s/\V\<<C-r><C-w>\>/
+
+" Allow undo after quitting vim
+set undofile
+set undodir=~/.vim/undodir//
 
 " Command history length
 set history=10000

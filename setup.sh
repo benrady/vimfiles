@@ -4,6 +4,8 @@ abspath="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
 vim_dir=`dirname $abspath`
 cd $vim_dir
 
+mkdir $vim_dir/undodir
+
 if [[ ! -e ~/.vimrc ]]; then
   ln -s $vim_dir/.vimrc ~/.vimrc
 fi
