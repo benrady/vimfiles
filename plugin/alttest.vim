@@ -48,5 +48,5 @@ function! Alternate()
   endif
 endfunction
 
-nnoremap <Leader>t :only<CR>:vsp `=Alternate()`<CR><C-w>w<CR>
+nnoremap <Leader>t :only<CR>:e `=Alternate()`<CR><C-w>w<CR>
 set splitright
