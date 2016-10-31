@@ -58,7 +58,7 @@ fetch_repo git://github.com/tpope/vim-dispatch.git
 fetch_repo git://github.com/tpope/vim-fireplace.git
 
 # Other clojure goodies
-fetch_repo https://github.com/kien/rainbow_parentheses.vim.git
+fetch_repo https://github.com/eapache/rainbow_parentheses.vim.git
 fetch_repo https://github.com/guns/vim-clojure-static.git 
 
 # Snippets for many languages (hit tab)

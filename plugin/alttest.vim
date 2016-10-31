@@ -49,4 +49,4 @@ function! Alternate()
 endfunction
 
 nnoremap <Leader>t :only<CR>:e `=Alternate()`<CR><C-w>w<CR>
-set splitright
+" set splitright
