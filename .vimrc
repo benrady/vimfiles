@@ -104,3 +104,6 @@ au BufRead,BufNewFile *_spec.rb set filetype=rspec
 
 " Source project local .vimrc files
 set exrc
+
+" Turn on Clojure Rainbow Parens
+au BufRead * RainbowParenthesesActivate
