@@ -82,6 +82,9 @@ set wildignore+=tmp,target,*.pyc,*.class
 " My Favorite font
 set guifont=Inconsolata:h18.00
 
+" Prevent extra file system events when writing files
+set backupcopy=yes
+
 " central backup directores
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
