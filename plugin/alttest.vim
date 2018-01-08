@@ -35,6 +35,18 @@ function! AlternateForClojure(file)
   endif
 endfunction
 
+function! AlternateForPython(file)
+  if match(a:file, 'spec') != -1
+    let alt = substitute(a:file, '_test\.py$', '.py', '')
+    let alt = substitute(alt, 'test/', 'src/', '')
+    return alt
+  else
+    let alt = substitute(a:file, '.py$', '_test.py', '')
+    let alt = substitute(alt, 'src/', 'test/', '')
+    return alt
+  endif
+endfunction
+
 function! Alternate()
   let current_file = expand("%")
   if match(current_file, '.rb$') != -1
@@ -43,6 +55,8 @@ function! Alternate()
     return AlternateForJavascript(current_file)
   elseif match(current_file, '.clj$') != -1
     return AlternateForClojure(current_file)
+  elseif match(current_file, '.py$') != -1
+    return AlternateForPython(current_file)
   else
     return current_file
   endif
