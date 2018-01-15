@@ -36,7 +36,7 @@ function! AlternateForClojure(file)
 endfunction
 
 function! AlternateForPython(file)
-  if match(a:file, 'spec') != -1
+  if match(a:file, 'test') != -1
     let alt = substitute(a:file, '_test\.py$', '.py', '')
     let alt = substitute(alt, 'test/', 'src/', '')
     return alt
