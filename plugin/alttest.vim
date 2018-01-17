@@ -1,3 +1,14 @@
+function! AlternateForCpp(file)
+  if match(a:file, 'Test') != -1
+    let alt = substitute(a:file, 'Test\.cpp$', '.cpp', '')
+    let alt = substitute(alt, 'test/', 'src/', '')
+    return alt
+  else
+    let alt = substitute(a:file, '.cpp$', 'Test.cpp', '')
+    let alt = substitute(alt, 'src/', 'test/', '')
+    return alt
+  endif
+endfunction
 
 function! AlternateForRuby(file)
   if match(a:file, 'spec') != -1
@@ -51,6 +62,8 @@ function! Alternate()
   let current_file = expand("%")
   if match(current_file, '.rb$') != -1
     return AlternateForRuby(current_file)
+  elseif match(current_file, '.cpp$') != -1
+    return AlternateForCpp(current_file)
   elseif match(current_file, '.js$') != -1
     return AlternateForJavascript(current_file)
   elseif match(current_file, '.clj$') != -1

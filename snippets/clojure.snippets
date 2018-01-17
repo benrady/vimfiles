@@ -1,6 +1,7 @@
 snippet test
 	(testing "${1:something}"
 	  ${2})
+	  
 snippet des
 	(describe 
 	  "${1:something}"
@@ -26,12 +27,4 @@ snippet aft
 
 snippet should
 	(should= ${1:expected} (${2:actual}))
-
-snippet ar
-	(add-recipe "${1}" 
-	            {"${2}" {:quantity ${3} :units "ounce"}
-				 "${4}" {:quantity ${5} :units "ounce"}
-				 }[[add-shaker "${6}"]
-				   [add-it "${7}"]
-				   ])
 

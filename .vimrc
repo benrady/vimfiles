@@ -12,10 +12,11 @@ endif
 
 " Map Ctrl-t to ctrlp tag lookup
 let g:ctrlp_extensions = ['tag']
-nmap <silent> <C-t> :CtrlPTag<CR>
 
-" Generate tags on file write
-" autocmd BufWritePost * call atags#generate()
+" Smarter working directory for CTRL-P
+let g:ctrlp_working_path_mode = 'a'
+
+nmap <silent> <C-t> :CtrlPTag<CR>
 
 " Set the path
 set path=.,,**
@@ -48,7 +49,6 @@ set mouse=
 
 " Automatically read and write files as needed
 set autowrite
-set autoread
 
 " With these options together, we only use case sensitive search when there is a captial letter in the search term
 set ignorecase
@@ -77,7 +77,7 @@ set linebreak
 set visualbell
 
 " Global ignores
-set wildignore+=tmp,target,*.pyc,*.class
+set wildignore+=tmp
 
 " My Favorite font
 set guifont=Inconsolata:h18.00
@@ -101,9 +101,6 @@ imap <C-space> <C-n>
 if has('nvim')
   tnoremap <Esc> <C-\><C-n>
 endif
-
-" Filetype hacks
-au BufRead,BufNewFile *_spec.rb set filetype=rspec
 
 " Source project local .vimrc files
 set exrc
