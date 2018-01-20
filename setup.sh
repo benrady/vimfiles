@@ -39,6 +39,10 @@ fetch_repo git://github.com/vim-airline/vim-airline.git
 fetch_repo https://github.com/MarcWeber/vim-addon-mw-utils.git
 fetch_repo https://github.com/ctrlpvim/ctrlp.vim
 
+# Rust dependencies
+fetch_repo https://github.com/rust-lang/rust.vim.git
+fetch_repo https://github.com/rhysd/rust-doc.vim
+
 # Create HTML using css expressions
 fetch_repo https://github.com/rstacruz/sparkup.git
 pushd bundle/sparkup

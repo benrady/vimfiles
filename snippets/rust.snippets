@@ -1,0 +1,37 @@
+# no arg new function
+snippet fn
+	fn ${1:name}() -> ${2:return_type}{
+	    ${3}
+	}
+# new 1 args function
+snippet fn1
+	fn ${1:name}(${2:arg} : ${3:type}) -> ${4:return_type}{
+	    ${5:$2}
+	}
+# new 2 arg function
+snippet fn2
+	fn ${1:name}(${2:arg} : ${3:type}, ${4:arg2} : ${5:type}) -> ${6:return_type}{
+	    ${7}
+	}
+# for loop
+snippet for
+	for ${1:var} in ${2:iterator} {
+	    ${3}
+	}
+# if statement
+snippet if
+	if ${1:condition} {
+	    ${2}
+	}
+# unit test
+snippet test
+	#[test]
+	fn test_${1:something}() {
+	    ${2}
+	}
+# assert true
+snippet ass
+	assert!(${1});
+# assert equal
+snippet asse
+	assert_eq!(${1:actual}, ${2:expected});
