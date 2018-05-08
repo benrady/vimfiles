@@ -6,9 +6,22 @@ snippet desc Describe Type
 	describe ${1:Type} do
 		${2}
 	end
+snippet bef Before each
+	before (:each) do
+		${1}
+	end
+snippet befa Before all
+	before (:all) do
+		${1}
+	end
 snippet it it block
 	it "${1:should do something}" do
 		${2}
 	end
 snippet xit it (pending)
 	it "${1:does something}"${2}
+snippet let let (:foo) { Foo.new }
+	let (:${1}) { ${2}.new }
+snippet letd let (:foo) { double 'foo' }
+	let (:${1}) { double '${2}' }
+
