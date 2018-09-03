@@ -3,4 +3,4 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Ignore jar files when editing clojure
-set wildignore+=lib,*.class,tracks,target
+set wildignore+=lib,*.class,target

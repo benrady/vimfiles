@@ -1,5 +1,4 @@
 " Load Pathogen
-"
 call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 

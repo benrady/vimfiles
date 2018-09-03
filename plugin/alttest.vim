@@ -35,13 +35,13 @@ function! AlternateForJavascript(file)
 endfunction
 
 function! AlternateForClojure(file)
-  if match(a:file, 'spec') != -1
-    let alt = substitute(a:file, '_spec\.clj$', '.clj', '')
-    let alt = substitute(alt, 'spec/', 'src/', '')
+  if match(a:file, 'test') != -1
+    let alt = substitute(a:file, '_test\.clj$', '.clj', '')
+    let alt = substitute(alt, 'test/', 'src/', '')
     return alt
   else
-    let alt = substitute(a:file, '.clj$', '_spec.clj', '')
-    let alt = substitute(alt, 'src/', 'spec/', '')
+    let alt = substitute(a:file, '.clj$', '_test.clj', '')
+    let alt = substitute(alt, 'src/', 'test/', '')
     return alt
   endif
 endfunction

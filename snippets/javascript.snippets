@@ -10,16 +10,16 @@ snippet fun
 	}
 # Jasmine test 
 snippet it
-	it('${1}', function() {
+	it('${1}', () => {
 	  expect(${2}).toEqual(${3});
 	});
 # Jasmine test 
 snippet bef
-	beforeEach(function() {
+	beforeEach(() => {
 	  ${1};
 	});
 # Jasmine describe 
 snippet des
-	describe('${1}', function() {
+	describe('${1}', () => {
 	  ${2}
 	});
