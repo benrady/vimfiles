@@ -25,7 +25,7 @@ function fetch_repo {
     git pull $url master
     popd
   else
-    git clone $url bundle/$name
+    git clone --recursive $url bundle/$name
   fi
 }
 
@@ -55,7 +55,10 @@ fetch_repo git://github.com/tpope/vim-projectionist.git
 fetch_repo git://github.com/tpope/vim-dispatch.git
 fetch_repo git://github.com/tpope/vim-fireplace.git
 
-# Other clojure goodies
+# Vim Jedi
+fetch_repo https://github.com/davidhalter/jedi-vim.git
+
+#e Other clojure goodies
 fetch_repo https://github.com/eapache/rainbow_parentheses.vim.git
 fetch_repo https://github.com/guns/vim-clojure-static.git 
 
