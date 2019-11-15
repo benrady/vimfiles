@@ -6,20 +6,20 @@ snippet fu
 	(${1}) => { ${2} }
 snippet fun
 	function ${1}(${2}) {
-	  ${3} 
+	    ${3} 
 	}
 # Jasmine test 
 snippet it
-	it('${1}', () => {
-	  expect(${2}).toEqual(${3});
+	it('${1}', async () => {
+	    expect(${2}).toEqual(${3});
 	});
 # Jasmine test 
 snippet bef
 	beforeEach(() => {
-	  ${1};
+	    ${1};
 	});
 # Jasmine describe 
 snippet des
 	describe('${1}', () => {
-	  ${2}
+	    ${2}
 	});

@@ -1,3 +1,5 @@
+let g:jedi#goto_stubs_command = "<leader>js"
+
 " Load Pathogen
 call pathogen#infect('bundle/{}')
 call pathogen#helptags()
