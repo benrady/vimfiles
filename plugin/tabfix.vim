@@ -15,7 +15,7 @@ let g:airline#extensions#whitespace#enabled = 0
 " Use hidden buffers for argdo goodness
 set hidden
 
-" Move to the next buffer with Ctrl-k
+" Move to the prev/next buffer with Ctrl-k/Ctrl-j
 map <silent> <C-k> :bprevious<CR>
-map <silent> <C-l> :bnext<CR>
+map <silent> <C-j> :bnext<CR>
 
