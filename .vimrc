@@ -4,13 +4,6 @@ let g:jedi#goto_stubs_command = "<leader>js"
 call pathogen#infect('bundle/{}')
 call pathogen#helptags()
 
-" Remap Ctrl-j to: Save All; Return to normal mode
-imap <silent> <C-j> <Esc>:wa<CR>
-nmap <silent> <C-j> :wa<CR>
-if has('nvim')
-  tnoremap <silent> <C-j> <C-\><C-n>
-endif
-
 " Map Ctrl-t to ctrlp tag lookup
 let g:ctrlp_extensions = ['tag']
 
