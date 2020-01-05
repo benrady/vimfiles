@@ -6,7 +6,7 @@ map <buffer> K :let save_isk = &iskeyword \|
     \ execute "!pydoc " . expand("<cword>") \|
     \ let &iskeyword = save_isk<CR>
 
-set wildignore+=*.pyc
+set wildignore+=*.pyc,.venv
 
 " Do not show vim-jedi when typing
 let g:jedi#popup_on_dot = 0
