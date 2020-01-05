@@ -98,6 +98,3 @@ endif
 
 " Source project local .vimrc files
 set exrc
-
-" Turn on Clojure Rainbow Parens
-au BufRead * RainbowParenthesesActivate
