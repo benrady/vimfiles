@@ -21,6 +21,9 @@ nnoremap <Leader>s :%s/\V\<<C-r><C-w>\>/
 " Show buffer number in airline tabs
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" Close netrw buffer after selecting a file
+let g:netrw_fastbrowse = 0
+
 " Allow undo after quitting vim
 set undofile
 set undodir=~/.vim/undodir//
