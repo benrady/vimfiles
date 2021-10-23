@@ -101,3 +101,6 @@ endif
 
 " Source project local .vimrc files
 set exrc
+
+" Allow legacy snipmate parser
+let g:snipMate = { 'snippet_version' : 1 }
