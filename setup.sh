@@ -30,10 +30,10 @@ function fetch_repo {
 }
 
 # Sensible default settings
-fetch_repo git://github.com/tpope/vim-sensible.git
+fetch_repo https://github.com/tpope/vim-sensible.git
 
 # Airline status bar
-fetch_repo git://github.com/vim-airline/vim-airline.git
+fetch_repo https://github.com/vim-airline/vim-airline.git
 
 # CTRL-P and its dependencies
 fetch_repo https://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -50,10 +50,10 @@ make vim-pathogen
 popd
 
 # Clojure repl goodness
-fetch_repo git://github.com/tpope/vim-salve.git
-fetch_repo git://github.com/tpope/vim-projectionist.git
-fetch_repo git://github.com/tpope/vim-dispatch.git
-fetch_repo git://github.com/tpope/vim-fireplace.git
+fetch_repo https://github.com/tpope/vim-salve.git
+fetch_repo https://github.com/tpope/vim-projectionist.git
+fetch_repo https://github.com/tpope/vim-dispatch.git
+fetch_repo https://github.com/tpope/vim-fireplace.git
 
 # Vim Jedi
 fetch_repo https://github.com/davidhalter/jedi-vim.git
